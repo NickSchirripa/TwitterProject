@@ -53,6 +53,7 @@ function handleReplyClick(replyId){
 }
 
 function handleTweetBtnClick(){
+    if(tweetInput.value){
        tweetsData.unshift({
         handle: `@rats`,
         profilePic: `images/rat.png`,
@@ -65,6 +66,8 @@ function handleTweetBtnClick(){
         uuid: uuidv4()
     })
     render()
+}
+    tweetInput.value = ''
 }
 
 
